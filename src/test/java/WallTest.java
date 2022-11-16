@@ -32,7 +32,10 @@ class WallTest {
 
     private Block whiteMarbleBlock;
 
+    private Block blueMarbleBlock;
     private CompositeBlock compositeBlock;
+
+    private CompositeBlock innerCompositeBlock;
 
     private Wall wall;
 
@@ -42,26 +45,33 @@ class WallTest {
         this.blackMarbleBlock = new BlockImpl(COLOR_BLACK, MATERIAL_MARBLE);
         this.blueConcreteBlock = new BlockImpl(COLOR_BLUE, MATERIAL_CONCRETE);
         this.whiteMarbleBlock = new BlockImpl(COLOR_WHITE, MATERIAL_MARBLE);
+        this.blueMarbleBlock = new BlockImpl(COLOR_BLUE, MATERIAL_MARBLE);
+
+        List<Block> innerBlocks = new ArrayList<>();
+        innerBlocks.add(this.blueMarbleBlock);
+        this.innerCompositeBlock = new CompositeBlockImpl(innerBlocks);
+
 
         List<Block> blocks = new ArrayList<>();
-        blocks.add(redMarbleBlock);
-        blocks.add(blackMarbleBlock);
+        blocks.add(this.redMarbleBlock);
+        blocks.add(this.blackMarbleBlock);
+        blocks.add(this.innerCompositeBlock);
 
         this.compositeBlock = new CompositeBlockImpl(blocks);
 
         this.wall = new Wall();
         wall.addBlock(this.compositeBlock);
-        wall.addBlock(blueConcreteBlock);
-        wall.addBlock(whiteMarbleBlock);
+        wall.addBlock(this.blueConcreteBlock);
+        wall.addBlock(this.whiteMarbleBlock);
 
     }
 
     @Test
-    void findBlockByColorBlueShouldReturnBlueConcreteBlock() {
+    void findBlockByColorBlueShouldReturnBlueMarbleBlock() {
         Optional<Block> blockByColor = this.wall.findBlockByColor(COLOR_BLUE);
 
         assertTrue(blockByColor.isPresent());
-        assertEquals(blockByColor.get(), this.blueConcreteBlock);
+        assertEquals(blockByColor.get(), this.blueMarbleBlock);
     }
 
     @Test
@@ -83,10 +93,11 @@ class WallTest {
     void findBlocksByMaterialMarbleShouldReturnThreeMarbleBlocks() {
         List<Block> blocksByMaterial = this.wall.findBlocksByMaterial(MATERIAL_MARBLE);
 
-        assertEquals(3, blocksByMaterial.size());
+        assertEquals(4, blocksByMaterial.size());
         assertEquals(blocksByMaterial.get(0), this.redMarbleBlock);
         assertEquals(blocksByMaterial.get(1), this.blackMarbleBlock);
-        assertEquals(blocksByMaterial.get(2), this.whiteMarbleBlock);
+        assertEquals(blocksByMaterial.get(2), this.blueMarbleBlock);
+        assertEquals(blocksByMaterial.get(3), this.whiteMarbleBlock);
     }
 
     @Test
@@ -100,7 +111,7 @@ class WallTest {
     void countShouldReturnFive() {
         int numOfBlocks = this.wall.count();
 
-        assertEquals(4, numOfBlocks);
+        assertEquals(5, numOfBlocks);
     }
 
     @Test
@@ -118,6 +129,6 @@ class WallTest {
         thirdWall.addBlock(this.compositeBlock);
         int numOfBlocks = thirdWall.count();
 
-        assertEquals(2, numOfBlocks);
+        assertEquals(3, numOfBlocks);
     }
 }

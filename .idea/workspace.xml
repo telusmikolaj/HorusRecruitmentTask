@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="315f9607-1dc8-4df9-8617-3e71bfca4687" name="Changes" comment="complete recruitment task">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/telusmikolaj/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/telusmikolaj/implementations/BlockImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/telusmikolaj/implementations/CompositeBlockImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/telusmikolaj/implementations/Wall.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/telusmikolaj/interfaces/Block.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/telusmikolaj/interfaces/CompositeBlock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/telusmikolaj/interfaces/Structure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/WallTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/WallTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WallTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +39,6 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
@@ -132,17 +118,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WallTest.findBlockByColorPinkShouldReturnEmptyOptional" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WallTest.findBlocksByMaterialMarbleShouldReturnThreeMarbleBlocks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Horus" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="WallTest" />
-      <option name="METHOD_NAME" value="findBlockByColorPinkShouldReturnEmptyOptional" />
+      <option name="METHOD_NAME" value="findBlocksByMaterialMarbleShouldReturnThreeMarbleBlocks" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -167,10 +147,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.WallTest" />
+        <item itemvalue="JUnit.WallTest.findBlocksByMaterialMarbleShouldReturnThreeMarbleBlocks" />
         <item itemvalue="JUnit.WallTest.countShouldReturnFive" />
         <item itemvalue="JUnit.WallTest.findBlocksByMaterialMarbleShouldReturnTwoMarbleBlocks" />
         <item itemvalue="JUnit.WallTest.findBlockByColorBlueShouldReturnBlueConcreteBlock" />
-        <item itemvalue="JUnit.WallTest.findBlockByColorPinkShouldReturnEmptyOptional" />
       </list>
     </recent_temporary>
   </component>
@@ -183,8 +163,16 @@
       <option name="presentableId" value="Default" />
       <updated>1668589280995</updated>
       <workItem from="1668589283051" duration="2984000" />
-      <workItem from="1668592452573" duration="2782000" />
+      <workItem from="1668592452573" duration="4106000" />
     </task>
+    <task id="LOCAL-00001" summary="complete recruitment task">
+      <created>1668595270722</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668595270723</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +200,16 @@
           <url>file://$PROJECT_DIR$/src/test/java/WallTest.java</url>
           <line>105</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/WallTest.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/WallTest.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
